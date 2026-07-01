@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liberia Money Guide – LiberiaCalc</title>
+  <meta name="description" content="Learn how to send mobile money in Liberia, understand LRD to USD exchange rates, and how to apply for a loan in Liberia." />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #BF0A30;
+      --blue: #002868;
+      --cream: #F7F5F0;
+      --ink: #0D0D0D;
+      --muted: #6B6B6B;
+      --border: #E0DDD8;
+      --card: #FFFFFF;
+      --gold: #FFD700;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header {
+      background: var(--blue);
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: white;
+    }
+    .logo span { color: var(--gold); }
+    nav { display: flex; gap: 16px; }
+    nav a {
+      color: rgba(255,255,255,0.75);
+      font-size: 13px;
+      text-decoration: none;
+    }
+    nav a:hover { color: white; }
+
+    .hero {
+      background: linear-gradient(135deg, var(--blue) 0%, #003580 100%);
+      color: white;
+      padding: 40px 20px 36px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(22px, 6vw, 32px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    /* AD SLOT */
+    .ad-slot {
+      background: var(--border);
+      border: 2px dashed #C8C5BE;
+      border-radius: 8px;
+      text-align: center;
+      padding: 14px;
+      font-size: 12px;
+      color: var(--muted);
+      margin: 20px;
+    }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 12px 16px 60px;
+    }
+
+    /* ARTICLE CARDS */
+    .article-card {
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .article-header {
+      background: var(--blue);
+      padding: 20px 24px 16px;
+    }
+    .article-tag {
+      display: inline-block;
+      background: var(--red);
+      color: white;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-bottom: 10px;
+    }
+    .article-header h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(18px, 4vw, 22px);
+      font-weight: 700;
+      color: white;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .article-body {
+      padding: 24px;
+    }
+    .article-body p {
+      font-size: 15px;
+      color: #2A2A2A;
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+    .article-body h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--blue);
+      margin: 22px 0 10px;
+    }
+    .article-body ul, .article-body ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+    .article-body li {
+      font-size: 15px;
+      color: #2A2A2A;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    .info-box {
+      background: #EEF3FF;
+      border-left: 3px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: var(--blue);
+      margin: 16px 0;
+      line-height: 1.6;
+    }
+    .warning-box {
+      background: #FFF4F4;
+      border-left: 3px solid var(--red);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: #8B0000;
+      margin: 16px 0;
+      line-height: 1.6;
+    }
+    .step {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+    .step-num {
+      min-width: 32px;
+      height: 32px;
+      background: var(--blue);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      margin-top: 2px;
+    }
+    .step-content { flex: 1; }
+    .step-content strong {
+      display: block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+    .step-content p { margin: 0; font-size: 14px; color: var(--muted); }
+
+    .cta-box {
+      background: linear-gradient(135deg, var(--blue), #003580);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .cta-box p {
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--blue);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+    }
+
+    /* TABLE OF CONTENTS */
+    .toc {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      border: 2px solid var(--border);
+    }
+    .toc h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .toc a {
+      display: block;
+      font-size: 14px;
+      color: var(--blue);
+      text-decoration: none;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .toc a:last-child { border-bottom: none; }
+    .toc a:hover { color: var(--red); }
+    .toc-num {
+      display: inline-block;
+      width: 22px;
+      font-weight: 700;
+      color: var(--red);
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--blue); text-decoration: none; }
+
+    .divider {
+      height: 3px;
+      background: linear-gradient(90deg, var(--red), var(--blue));
+      border-radius: 2px;
+      margin: 8px 0 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Liberia<span>Calc</span>.com</div>
+  <nav>
+    <a href="index.html">Calculator</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Liberia <em>Money</em> Guide</h1>
+  <p>Simple, practical guides to help every Liberian manage money better.</p>
+</div>
+
+<div class="ad-slot">📢 Advertisement — Google AdSense Ad will appear here</div>
+
+<main>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h3>📖 In This Guide</h3>
+    <a href="#mobile-money"><span class="toc-num">1.</span> How to Send Mobile Money in Liberia</a>
+    <a href="#exchange-rate"><span class="toc-num">2.</span> Understanding the LRD to USD Exchange Rate</a>
+    <a href="#loan-guide"><span class="toc-num">3.</span> How to Apply for a Loan in Liberia</a>
+  </div>
+
+  <!-- ARTICLE 1 -->
+  <div class="article-card" id="mobile-money">
+    <div class="article-header">
+      <div class="article-tag">📱 Mobile Money</div>
+      <h2>How to Send Mobile Money in Liberia</h2>
+      <div class="article-meta">LiberiaCalc Guide · June 2026 · 4 min read</div>
+      <div class="divider"></div>
+    </div>
+    <div class="article-body">
+      <p>Mobile money has changed how Liberians handle cash. Today, millions of people across Liberia use services like Lonestar Mobile Money and Orange Money to send funds, pay bills, and buy airtime — all from a basic mobile phone. However, many users still pay more in fees than they need to, simply because they don't know how the process works.</p>
+
+      <p>This guide explains exactly how to send mobile money in Liberia, what fees to expect, and how to protect yourself from common mistakes.</p>
+
+      <h3>What Is Mobile Money?</h3>
+      <p>Mobile money is a service that lets you store, send, and receive money using your phone number as your account. You don't need a bank account. You don't need a smartphone. Any basic phone that can send and receive text messages (USSD codes) can use mobile money in Liberia.</p>
+
+      <p>The two main providers in Liberia are:</p>
+      <ul>
+        <li><strong>Lonestar Mobile Money</strong> — operated by Lonestar Cell MTN, one of Liberia's largest telecom networks.</li>
+        <li><strong>Orange Money</strong> — operated by Orange Liberia, offering similar transfer and payment services.</li>
+      </ul>
+
+      <h3>Step-by-Step: How to Send Mobile Money</h3>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Make sure your mobile money account is active</strong>
+          <p>If you haven't registered yet, visit your nearest Lonestar or Orange agent with a valid ID. Registration is free and takes less than 10 minutes.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Load money onto your mobile wallet</strong>
+          <p>Visit an authorized agent and deposit cash into your mobile money wallet. The agent will send you a confirmation SMS once funds are added.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Dial the USSD code</strong>
+          <p>For Lonestar, dial <strong>*156#</strong>. For Orange Money, dial <strong>*144#</strong>. Follow the on-screen menu to select "Send Money."</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <strong>Enter the recipient's number and amount</strong>
+          <p>Double-check the phone number before confirming. Sending to a wrong number is hard to reverse.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <strong>Enter your PIN and confirm</strong>
+          <p>You'll receive a confirmation SMS with the transaction details. Keep this for your records.</p>
+        </div>
+      </div>
+
+      <h3>What Are the Fees?</h3>
+      <p>Mobile money providers charge a small fee for each transfer. Fees typically range from 1.2% to 2.5% of the transfer amount depending on the amount sent and the type of transaction. Use our <a href="index.html">Mobile Money Fee Calculator</a> to estimate your fee before sending.</p>
+
+      <div class="warning-box">
+        ⚠️ <strong>Watch out for fraud.</strong> Never share your mobile money PIN with anyone — not even agents. No legitimate mobile money service will ever ask for your PIN over the phone or by SMS.
+      </div>
+
+      <div class="info-box">
+        💡 Always confirm with your provider's official app or USSD menu for the most current fees. Rates can change without public notice.
+      </div>
+
+      <div class="cta-box">
+        <p>Want to know exactly how much your transfer will cost?</p>
+        <a href="index.html#mobile-money" class="cta-btn">Calculate My Fee →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-slot">📢 Advertisement — Google AdSense Ad will appear here</div>
+
+  <!-- ARTICLE 2 -->
+  <div class="article-card" id="exchange-rate">
+    <div class="article-header">
+      <div class="article-tag">💱 Exchange Rate</div>
+      <h2>Understanding the LRD to USD Exchange Rate in Liberia</h2>
+      <div class="article-meta">LiberiaCalc Guide · June 2026 · 4 min read</div>
+      <div class="divider"></div>
+    </div>
+    <div class="article-body">
+      <p>In Liberia, two currencies circulate side by side every day — the Liberian Dollar (LRD) and the United States Dollar (USD). Understanding how the exchange rate between them works can save you money, help you plan better, and protect you from getting shortchanged in the market.</p>
+
+      <h3>Why Does Liberia Use Two Currencies?</h3>
+      <p>Liberia has used the US Dollar alongside the Liberian Dollar for decades. The US Dollar is widely accepted for larger transactions, rent, school fees, and business payments. The Liberian Dollar handles smaller everyday purchases like food, transport, and market goods.</p>
+
+      <p>This dual-currency system means every Liberian needs to understand the exchange rate — because the rate directly affects how much your money is worth.</p>
+
+      <h3>What Determines the Exchange Rate?</h3>
+      <p>The exchange rate between LRD and USD shifts based on several factors:</p>
+      <ul>
+        <li><strong>Central Bank of Liberia (CBL) policy</strong> — The CBL sets an official rate and intervenes in the market to maintain stability.</li>
+        <li><strong>Supply and demand</strong> — When more people want USD than LRD, the Liberian Dollar weakens and the rate rises.</li>
+        <li><strong>Government spending and revenue</strong> — High government expenditure without matching revenue puts pressure on the exchange rate.</li>
+        <li><strong>Imports and exports</strong> — Liberia imports more than it exports, which creates constant demand for foreign currency.</li>
+        <li><strong>Inflation</strong> — When prices rise faster in Liberia than in the US, the LRD tends to weaken against the USD.</li>
+      </ul>
+
+      <h3>Official Rate vs. Street Rate</h3>
+      <p>In Liberia, there are often two different rates in circulation at the same time:</p>
+      <ul>
+        <li><strong>Official/bank rate</strong> — Set by the CBL and used by banks and formal financial institutions. This is the most reliable and stable rate.</li>
+        <li><strong>Street/market rate</strong> — The rate offered by money changers in markets and on the street. It is often slightly different from the official rate and can fluctuate daily.</li>
+      </ul>
+
+      <div class="info-box">
+        💡 For everyday use, the street rate is what most Liberians encounter. Always check both rates before making large currency exchanges. The official CBL rate is published at <strong>cbl.org.lr</strong>.
+      </div>
+
+      <h3>How to Get the Best Exchange Rate</h3>
+      <ul>
+        <li>Check the CBL official rate first so you know the baseline.</li>
+        <li>Compare rates at two or three exchange points before committing.</li>
+        <li>Avoid exchanging money at airports or hotels — these typically offer the worst rates.</li>
+        <li>For large amounts, use a licensed commercial bank for security and better rates.</li>
+        <li>Use our <a href="index.html">LRD to USD Converter</a> and enter today's rate to calculate exactly what you'll receive.</li>
+      </ul>
+
+      <div class="warning-box">
+        ⚠️ <strong>Counterfeit warning.</strong> Always count and verify notes carefully when exchanging money, especially on the street market. Counterfeit Liberian Dollar notes do exist.
+      </div>
+
+      <div class="cta-box">
+        <p>Convert LRD to USD instantly with today's rate.</p>
+        <a href="index.html" class="cta-btn">Open Currency Converter →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-slot">📢 Advertisement — Google AdSense Ad will appear here</div>
+
+  <!-- ARTICLE 3 -->
+  <div class="article-card" id="loan-guide">
+    <div class="article-header">
+      <div class="article-tag">🏦 Loans</div>
+      <h2>How to Apply for a Loan in Liberia</h2>
+      <div class="article-meta">LiberiaCalc Guide · June 2026 · 5 min read</div>
+      <div class="divider"></div>
+    </div>
+    <div class="article-body">
+      <p>Whether you need money to start a small business, pay school fees, or cover an emergency, borrowing money in Liberia is an option many people turn to. However, understanding how loans work — and what they actually cost — can be the difference between a good financial decision and one that leaves you struggling to repay.</p>
+
+      <p>This guide walks you through the main types of loans available in Liberia, what lenders look for, and how to calculate what you'll actually pay back before you sign anything.</p>
+
+      <h3>Types of Loans Available in Liberia</h3>
+
+      <p>Not all loans are the same. Here are the main types available to ordinary Liberians:</p>
+
+      <ul>
+        <li><strong>Commercial bank loans</strong> — Offered by banks like Ecobank, United Bank for Africa (UBA), and others. These typically have lower interest rates but stricter requirements such as collateral, a bank account, and proof of income.</li>
+        <li><strong>Microfinance loans</strong> — Offered by organizations like BRAC Liberia, AccessBank, and local cooperatives. These are designed for small business owners and individuals who may not qualify for a bank loan. Requirements are usually simpler.</li>
+        <li><strong>Mobile money loans</strong> — Some mobile money providers now offer small short-term loans directly through your phone. These are fast and convenient but often carry higher fees.</li>
+        <li><strong>Credit unions and cooperatives</strong> — Community-based lending groups where members pool money and lend to each other at agreed rates. Often the most affordable option for small amounts.</li>
+        <li><strong>Informal/personal loans</strong> — Borrowing from family, friends, or private lenders. No formal paperwork, but terms can be unclear and disputes are common.</li>
+      </ul>
+
+      <h3>What Lenders Look For</h3>
+      <p>Before approving a loan, most formal lenders in Liberia will check:</p>
+      <ul>
+        <li>Valid national ID or passport</li>
+        <li>Proof of income or business activity</li>
+        <li>An active bank account (for bank loans)</li>
+        <li>Collateral for larger loan amounts (property, vehicle, or equipment)</li>
+        <li>Credit history if available</li>
+        <li>References or guarantors for microfinance loans</li>
+      </ul>
+
+      <h3>Step-by-Step: How to Apply</h3>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Decide how much you need and why</strong>
+          <p>Be specific. Lenders want to know exactly what the money is for and how you'll repay it. Borrow only what you genuinely need.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Calculate what you can afford to repay</strong>
+          <p>Use our <a href="index.html">Loan Calculator</a> to see your monthly payment before applying. A good rule: your monthly loan repayment should not exceed 30% of your monthly income.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Compare lenders</strong>
+          <p>Visit at least two lenders and ask for the full annual interest rate, all fees, and the total repayment amount. Don't just look at the monthly payment — ask for the total cost of the loan.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <strong>Gather your documents</strong>
+          <p>Prepare your ID, income proof, and any collateral documents in advance. Missing documents slow down the process significantly.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <strong>Read the agreement carefully before signing</strong>
+          <p>Pay attention to the interest rate, repayment schedule, penalty fees for late payments, and what happens if you default. If something is unclear, ask before signing.</p>
+        </div>
+      </div>
+
+      <h3>Understanding Interest Rates in Liberia</h3>
+      <p>Interest rates on loans in Liberia vary widely. Commercial banks may charge between 12% and 25% per year. Microfinance institutions often charge more — sometimes 30% to 50% annually — because they take on higher risk lending to people without collateral. Mobile money loans can be even higher when calculated on an annual basis.</p>
+
+      <div class="warning-box">
+        ⚠️ <strong>Beware of loan sharks.</strong> Unlicensed private lenders sometimes offer quick cash at extremely high rates with harsh penalties. If a lender isn't registered with the Central Bank of Liberia, avoid them.
+      </div>
+
+      <div class="info-box">
+        💡 The Central Bank of Liberia (CBL) regulates all licensed lenders. You can verify if a lender is licensed by visiting <strong>cbl.org.lr</strong> or calling the CBL directly.
+      </div>
+
+      <div class="cta-box">
+        <p>Know exactly what your loan will cost before you apply.</p>
+        <a href="index.html" class="cta-btn">Calculate My Loan →</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div class="ad-slot" style="margin: 0 20px 20px;">📢 Advertisement — Google AdSense Ad will appear here</div>
+
+<footer>
+  <p>© 2026 LiberiaCalc.com — Free tools and guides for Liberians</p>
+  <p style="margin-top:6px;">
+    <a href="index.html">Calculator</a> ·
+    <a href="guides.html">Guides</a> ·
+    <a href="about.html">About & Privacy</a> ·
+    Powered by <a href="https://liberiamedia.com" target="_blank">LiberiaMedia.com</a>
+  </p>
+</footer>
+
+</body>
+</html>
