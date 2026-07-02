@@ -16,7 +16,7 @@ s.src='https://nap5k.com/tag.min.js'
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LiberiaHub – Tools & Free Downloads</title>
+<title>LiberiaHub – Downloads & Tools</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -39,25 +39,15 @@ background:linear-gradient(90deg,#002868,#0040aa);
 padding:18px;
 text-align:center;
 color:white;
-font-size:26px;
+font-size:28px;
 font-weight:700;
 position:sticky;
 top:0;
 z-index:99;
-box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
 header span{
 color:#FFD700;
-}
-
-.top-ad{
-background:white;
-margin:15px;
-padding:14px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
 .container{
@@ -79,7 +69,7 @@ background:white;
 padding:18px;
 margin-bottom:15px;
 border-radius:15px;
-box-shadow:0 3px 12px rgba(0,0,0,.08);
+box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
 input,select{
@@ -104,18 +94,6 @@ font-weight:600;
 cursor:pointer;
 }
 
-button:hover{
-opacity:.9;
-}
-
-.result{
-margin-top:10px;
-padding:12px;
-background:#eef4ff;
-border-radius:10px;
-font-weight:600;
-}
-
 .download-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
@@ -130,11 +108,6 @@ text-align:center;
 box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-.download-card h3{
-font-size:16px;
-margin-bottom:8px;
-}
-
 .download-btn{
 display:block;
 text-decoration:none;
@@ -147,12 +120,12 @@ font-size:14px;
 font-weight:600;
 }
 
-.mid-ad{
-background:white;
-margin:20px 0;
-padding:14px;
-border-radius:12px;
-text-align:center;
+.result{
+margin-top:10px;
+padding:12px;
+background:#eef4ff;
+border-radius:10px;
+font-weight:600;
 }
 
 footer{
@@ -165,17 +138,13 @@ font-size:14px;
 }
 
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
 Liberia<span>Hub 🇱🇷</span>
 </header>
-
-<div class="top-ad">
-📢 Advertisement
-</div>
 
 <div class="container">
 
@@ -184,98 +153,91 @@ Liberia<span>Hub 🇱🇷</span>
 <div class="card">
 
 <label>USD Amount</label>
-<input id="usd" type="number" placeholder="Enter USD">
+<input id="usd" type="number">
 
-<label>Exchange Rate (1 USD)</label>
+<label>Exchange Rate</label>
 <input id="rate" type="number" value="193.50">
 
 <button onclick="convert()">Convert</button>
 
 <div class="result" id="result">
-Result will show here
+Result here
 </div>
 
 </div>
-<h2 class="section-title">📱 Mobile Money Fee Calculator</h2>
+
+<h2 class="section-title">📱 Mobile Money Calculator</h2>
 
 <div class="card">
 
 <label>Amount (LRD)</label>
-<input id="mmAmount" type="number" placeholder="Enter amount">
+<input id="mmAmount" type="number">
 
 <select id="provider">
-<option value="0.02">Lonestar Money (2%)</option>
-<option value="0.018">Orange Money (1.8%)</option>
+<option value="0.02">Lonestar</option>
+<option value="0.018">Orange Money</option>
 </select>
 
-<button onclick="calcMM()">Calculate Fee</button>
+<button onclick="calcMM()">Calculate</button>
 
 <div class="result" id="mmResult">
-Fee result shows here
+Result here
 </div>
 
 </div>
-
 
 <h2 class="section-title">🏦 Loan Calculator</h2>
 
 <div class="card">
 
-<label>Loan Amount (LRD)</label>
+<label>Loan Amount</label>
 <input id="loanAmount" type="number">
 
-<label>Interest Rate %</label>
-<input id="loanRate" type="number" placeholder="18">
+<label>Interest %</label>
+<input id="loanRate" type="number">
 
 <label>Months</label>
-<input id="loanMonths" type="number" placeholder="12">
+<input id="loanMonths" type="number">
 
-<button onclick="calcLoan()">Calculate Loan</button>
+<button onclick="calcLoan()">Calculate</button>
 
 <div class="result" id="loanResult">
-Loan result shows here
+Result here
 </div>
 
 </div>
-
-
-<div class="mid-ad">
-📢 Advertisement
-</div>
-
-
 <h2 class="section-title">📥 Popular Apps</h2>
 
 <div class="download-grid">
 
 <div class="download-card">
 <h3>WhatsApp</h3>
-<a class="download-btn" href="https://www.whatsapp.com/android/" target="_blank">Download</a>
+<a class="download-btn" href="#" onclick="forceAd('https://www.whatsapp.com/android/')">Download</a>
 </div>
 
 <div class="download-card">
 <h3>Telegram</h3>
-<a class="download-btn" href="https://telegram.org/apps" target="_blank">Download</a>
+<a class="download-btn" href="#" onclick="forceAd('https://telegram.org/apps')">Download</a>
 </div>
 
 <div class="download-card">
 <h3>TikTok</h3>
-<a class="download-btn" href="https://www.tiktok.com/download" target="_blank">Download</a>
+<a class="download-btn" href="#" onclick="forceAd('https://www.tiktok.com/download')">Download</a>
 </div>
 
 <div class="download-card">
 <h3>CapCut</h3>
-<a class="download-btn" href="https://www.capcut.com/" target="_blank">Download</a>
+<a class="download-btn" href="#" onclick="forceAd('https://www.capcut.com/')">Download</a>
 </div>
 
 <div class="download-card">
 <h3>Facebook</h3>
-<a class="download-btn" href="https://play.google.com/store/apps/details?id=com.facebook.katana" target="_blank">Download</a>
+<a class="download-btn" href="#" onclick="forceAd('https://play.google.com/store/apps/details?id=com.facebook.katana')">Download</a>
 </div>
 
 <div class="download-card">
 <h3>Instagram</h3>
-<a class="download-btn" href="https://www.instagram.com/download/" target="_blank">Download</a>
+<a class="download-btn" href="#" onclick="forceAd('https://www.instagram.com/download/')">Download</a>
 </div>
 
 </div>
@@ -286,105 +248,119 @@ Loan result shows here
 <div class="download-grid">
 
 <div class="download-card">
-  <h3>Trending Movies</h3>
-  <a class="download-btn" href="https://archive.org" target="_blank">Watch / Download</a>
+<h3>Trending Movies</h3>
+<a class="download-btn" href="#" onclick="forceAd('https://archive.org')">Watch</a>
 </div>
 
 <div class="download-card">
 <h3>Hollywood Movies</h3>
-<a class="download-btn" href="https://www.youtube.com/results?search_query=hollywood+full+movie" target="_blank">Watch Movies</a>
+<a class="download-btn" href="#" onclick="forceAd('https://www.youtube.com/results?search_query=hollywood+full+movie')">Watch</a>
 </div>
 
 <div class="download-card">
 <h3>Nollywood Movies</h3>
-<a class="download-btn" href="https://www.youtube.com/results?search_query=nollywood+full+movie" target="_blank">Watch Movies</a>
+<a class="download-btn" href="#" onclick="forceAd('https://www.youtube.com/results?search_query=nollywood+full+movie')">Watch</a>
 </div>
 
 <div class="download-card">
 <h3>TV Series</h3>
-<a class="download-btn" href="https://www.youtube.com/results?search_query=tv+series+full+episodes" target="_blank">Watch Series</a></a>
+<a class="download-btn" href="#" onclick="forceAd('https://www.youtube.com/results?search_query=tv+series+full+episodes')">Watch</a>
 </div>
 
 </div>
+
+
 <h2 class="section-title">💻 Software Downloads</h2>
 
 <div class="download-grid">
 
 <div class="download-card">
 <h3>VLC Player</h3>
-<a class="download-btn" href="https://www.videolan.org/vlc/" target="_blank">Download</a>
+<a class="download-btn" href="#" onclick="forceAd('https://www.videolan.org/vlc/')">Download</a>
 </div>
 
 <div class="download-card">
 <h3>Google Chrome</h3>
-<a class="download-btn" href="https://www.google.com/chrome/" target="_blank">Download</a>
+<a class="download-btn" href="#" onclick="forceAd('https://www.google.com/chrome/')">Download</a>
 </div>
 
 <div class="download-card">
 <h3>Adobe Reader</h3>
-<a class="download-btn" href="https://get.adobe.com/reader/" target="_blank">Download</a>
+<a class="download-btn" href="#" onclick="forceAd('https://get.adobe.com/reader/')">Download</a>
 </div>
 
 <div class="download-card">
 <h3>Canva</h3>
-<a class="download-btn" href="https://www.canva.com/" target="_blank">Download</a>
+<a class="download-btn" href="#" onclick="forceAd('https://www.canva.com/')">Download</a>
 </div>
 
 </div>
-
-
-<div class="mid-ad">
-📢 Advertisement
-</div>
-
-</div> <!-- container -->
-
 
 <footer>
-Powered by <a href="https://liberiamedia.com" target="_blank" style="color:#FFD700;">LiberiaMedia.com</a>
+Powered by LiberiaMedia.com
 </footer>
-
-
 <script>
 
-function convert(){
-let usd = parseFloat(document.getElementById("usd").value) || 0;
-let rate = parseFloat(document.getElementById("rate").value) || 193.5;
-let result = usd * rate;
+function forceAd(link){
 
-document.getElementById("result").innerHTML =
-usd + " USD = L$ " + result.toFixed(2);
+  // tries to trigger Monetag ad first
+  if(typeof show_11225637 === "function"){
+      show_11225637();
+  }
+
+  // then opens actual destination
+  setTimeout(function(){
+      window.open(link,"_blank");
+  },2000);
 }
+
+
+function convert(){
+
+  let usd = parseFloat(document.getElementById("usd").value) || 0;
+  let rate = parseFloat(document.getElementById("rate").value) || 193.5;
+  let result = usd * rate;
+
+  document.getElementById("result").innerHTML =
+  usd + " USD = L$ " + result.toFixed(2);
+
+}
+
 
 function calcMM(){
-let amt = parseFloat(document.getElementById("mmAmount").value) || 0;
-let feeRate = parseFloat(document.getElementById("provider").value);
-let fee = amt * feeRate;
-let total = amt + fee;
 
-document.getElementById("mmResult").innerHTML =
-"Fee: L$ " + fee.toFixed(2) + "<br>Total: L$ " + total.toFixed(2);
+  let amt = parseFloat(document.getElementById("mmAmount").value) || 0;
+  let feeRate = parseFloat(document.getElementById("provider").value);
+
+  let fee = amt * feeRate;
+  let total = amt + fee;
+
+  document.getElementById("mmResult").innerHTML =
+  "Fee: L$ " + fee.toFixed(2) +
+  "<br>Total: L$ " + total.toFixed(2);
+
 }
+
 
 function calcLoan(){
 
-let amount = parseFloat(document.getElementById("loanAmount").value) || 0;
-let rate = parseFloat(document.getElementById("loanRate").value) || 0;
-let months = parseFloat(document.getElementById("loanMonths").value) || 1;
+  let amount = parseFloat(document.getElementById("loanAmount").value) || 0;
+  let rate = parseFloat(document.getElementById("loanRate").value) || 0;
+  let months = parseFloat(document.getElementById("loanMonths").value) || 1;
 
-let monthlyRate = (rate/100)/12;
+  let monthlyRate = (rate / 100) / 12;
 
-let payment =
-(monthlyRate===0)
-? amount/months
-: amount * (monthlyRate*Math.pow(1+monthlyRate,months)) /
-(Math.pow(1+monthlyRate,months)-1);
+  let payment =
+  (monthlyRate === 0)
+  ? amount / months
+  : amount * (monthlyRate * Math.pow(1 + monthlyRate, months)) /
+  (Math.pow(1 + monthlyRate, months) - 1);
 
-let total = payment * months;
+  let total = payment * months;
 
-document.getElementById("loanResult").innerHTML =
-"Monthly Payment: L$ " + payment.toFixed(2) +
-"<br>Total Repayment: L$ " + total.toFixed(2);
+  document.getElementById("loanResult").innerHTML =
+  "Monthly Payment: L$ " + payment.toFixed(2) +
+  "<br>Total Repayment: L$ " + total.toFixed(2);
 
 }
 
