@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+<!-- MONETAG TOP BANNER -->
 <script>
 (function(s){
 s.dataset.zone='11230284',
@@ -13,6 +14,7 @@ s.src='https://nap5k.com/tag.min.js'
 .appendChild(document.createElement('script')))
 </script>
 
+<!-- MONETAG SECOND ZONE -->
 <script>
 (function(s){
 s.dataset.zone='11225637',
@@ -25,14 +27,11 @@ s.src='https://nap5k.com/tag.min.js'
 </script>
 
 <meta charset="UTF-8">
-  
-
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-<title>LiberiaHub – Downloads & Tools</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>LiberiaHub Finance & Downloads</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -41,164 +40,353 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#f4f7fb;
+background:#f4f8fc;
 color:#222;
+line-height:1.5;
 }
+
+/* HEADER */
 
 header{
-background:linear-gradient(90deg,#002868,#0040aa);
+background:linear-gradient(135deg,#002868,#BF0A30);
 padding:18px;
 text-align:center;
-color:white;
-font-size:28px;
-font-weight:700;
 position:sticky;
 top:0;
-z-index:99;
+z-index:999;
+box-shadow:0 3px 12px rgba(0,0,0,.15);
 }
 
-header span{
+.logo{
+font-size:28px;
+font-weight:700;
+color:white;
+}
+
+.logo span{
 color:#FFD700;
 }
 
-.container{
-width:95%;
-max-width:900px;
-margin:auto;
-padding:15px;
+/* NAVIGATION */
+
+nav{
+display:flex;
+justify-content:center;
+gap:12px;
+margin-top:10px;
+flex-wrap:wrap;
 }
 
-.section-title{
-font-size:22px;
-font-weight:700;
-margin:20px 0 12px;
-color:#002868;
+nav a{
+text-decoration:none;
+color:white;
+font-size:14px;
+padding:7px 14px;
+background:rgba(255,255,255,.15);
+border-radius:20px;
 }
+
+/* HERO */
+
+.hero{
+padding:40px 20px;
+text-align:center;
+background:
+linear-gradient(rgba(255,255,255,.90),rgba(255,255,255,.92)),
+url("https://upload.wikimedia.org/wikipedia/commons/b/b8/Flag_of_Liberia.svg");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:30px;
+font-weight:700;
+color:#002868;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:15px;
+max-width:650px;
+margin:auto;
+color:#555;
+}
+
+/* CONTAINER */
+
+.container{
+width:94%;
+max-width:1100px;
+margin:auto;
+padding:20px 0;
+}
+
+/* AD BANNER */
+
+.ad-banner{
+width:100%;
+min-height:90px;
+background:white;
+border-radius:12px;
+margin:20px 0;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+padding:10px;
+}
+
+/* SECTION */
+
+.section-title{
+font-size:24px;
+font-weight:700;
+color:#002868;
+margin:25px 0 15px;
+}
+
+/* CARDS */
 
 .card{
 background:white;
-padding:18px;
-margin-bottom:15px;
-border-radius:15px;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+padding:20px;
+border-radius:16px;
+box-shadow:0 3px 12px rgba(0,0,0,.08);
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-bottom:6px;
+font-size:14px;
+font-weight:500;
 }
 
 input,select{
 width:100%;
-padding:12px;
-margin-top:8px;
-margin-bottom:12px;
+padding:14px;
+margin-bottom:14px;
 border:1px solid #ddd;
 border-radius:10px;
 font-size:16px;
+outline:none;
 }
+
+/* BUTTON */
 
 button{
 width:100%;
-padding:13px;
+padding:14px;
 background:#002868;
-color:white;
 border:none;
-border-radius:10px;
+color:white;
 font-size:16px;
 font-weight:600;
+border-radius:10px;
 cursor:pointer;
+transition:.2s;
 }
 
-.download-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:15px;
+button:hover{
+transform:scale(1.01);
 }
 
-.download-card{
-background:white;
-padding:18px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
-
-.download-btn{
-display:block;
-text-decoration:none;
-margin-top:10px;
-background:#28a745;
-padding:10px;
-color:white;
-border-radius:8px;
-font-size:14px;
-font-weight:600;
-}
+/* RESULT */
 
 .result{
-margin-top:10px;
-padding:12px;
+margin-top:14px;
+padding:14px;
 background:#eef4ff;
 border-radius:10px;
 font-weight:600;
 }
 
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+}
+
+/* DOWNLOAD CARD */
+
+.download-card{
+background:white;
+padding:18px;
+border-radius:14px;
+text-align:center;
+box-shadow:0 2px 10px rgba(0,0,0,.07);
+}
+
+.download-card h3{
+font-size:16px;
+margin-bottom:10px;
+}
+
+.download-btn{
+display:block;
+text-decoration:none;
+padding:10px;
+background:#28a745;
+color:white;
+border-radius:8px;
+font-weight:600;
+}
+
+/* STICKY BOTTOM AD */
+
+.sticky-ad{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:white;
+box-shadow:0 -2px 10px rgba(0,0,0,.1);
+padding:8px;
+z-index:999;
+text-align:center;
+min-height:60px;
+}
+
+/* FOOTER */
+
 footer{
-margin-top:30px;
+margin-top:40px;
 background:#002868;
 color:white;
 text-align:center;
-padding:20px;
-font-size:14px;
+padding:25px;
+padding-bottom:80px;
 }
 
 </style>
 
 </head>
+
 <body>
 
 <header>
+
+<div class="logo">
 Liberia<span>Hub 🇱🇷</span>
+</div>
+
+<nav>
+<a href="#currency">Currency</a>
+<a href="#mobilemoney">Mobile Money</a>
+<a href="#loan">Loans</a>
+<a href="#downloads">Downloads</a>
+</nav>
+
 </header>
+
+<section class="hero">
+
+<h1>Liberia Finance & Download Center</h1>
+
+<p>
+Real-time currency conversion, mobile money tools,
+loan calculator and free downloads in one platform.
+</p>
+
+</section>
 
 <div class="container">
 
-<h2 class="section-title">💱 Currency Converter</h2>
+<div class="ad-banner">
+TOP SPONSORED AD
+</div>
+
+<section id="currency">
+
+<h2 class="section-title">🌍 Live Currency Converter</h2>
 
 <div class="card">
 
-<label>USD Amount</label>
-<input id="usd" type="number">
+<label>Amount</label>
+<input id="amount" type="number" value="1">
 
-<label>Exchange Rate</label>
-<input id="rate" type="number" value="193.50">
+<label>From Currency</label>
 
-<button onclick="convert()">Convert</button>
+<select id="fromCurrency">
 
-<div class="result" id="result">
-Result here
+<option value="USD">USD 🇺🇸</option>
+<option value="LRD">LRD 🇱🇷</option>
+<option value="EUR">EUR 🇪🇺</option>
+<option value="GBP">GBP 🇬🇧</option>
+<option value="NGN">NGN 🇳🇬</option>
+<option value="GHS">GHS 🇬🇭</option>
+<option value="ZAR">ZAR 🇿🇦</option>
+<option value="CAD">CAD 🇨🇦</option>
+<option value="AED">AED 🇦🇪</option>
+<option value="INR">INR 🇮🇳</option>
+
+</select>
+
+<label>To Currency</label>
+
+<select id="toCurrency">
+
+<option value="LRD">LRD 🇱🇷</option>
+<option value="USD">USD 🇺🇸</option>
+<option value="EUR">EUR 🇪🇺</option>
+<option value="GBP">GBP 🇬🇧</option>
+<option value="NGN">NGN 🇳🇬</option>
+<option value="GHS">GHS 🇬🇭</option>
+<option value="ZAR">ZAR 🇿🇦</option>
+<option value="CAD">CAD 🇨🇦</option>
+<option value="AED">AED 🇦🇪</option>
+<option value="INR">INR 🇮🇳</option>
+
+</select>
+
+<button onclick="convertCurrency()">Convert</button>
+
+<div class="result" id="currencyResult">
+Live conversion result appears here
 </div>
 
 </div>
 
-<h2 class="section-title">📱 Mobile Money Calculator</h2>
+</section>
+
+<div class="ad-banner">
+MID PAGE SPONSORED AD
+</div>
+
+<section id="mobilemoney">
+
+<h2 class="section-title">📱 Liberia Mobile Money Calculator</h2>
 
 <div class="card">
 
 <label>Amount (LRD)</label>
-<input id="mmAmount" type="number">
+<input id="mmAmount" type="number" placeholder="Enter amount">
+
+<label>Provider</label>
 
 <select id="provider">
-<option value="0.02">Lonestar</option>
+<option value="0.02">Lonestar MTN</option>
 <option value="0.018">Orange Money</option>
 </select>
 
-<button onclick="calcMM()">Calculate</button>
+<button onclick="calcMobileMoney()">Calculate Fee</button>
 
-<div class="result" id="mmResult">
-Result here
+<div class="result" id="mobileMoneyResult">
+Fee result appears here
 </div>
 
 </div>
+
+</section>
+
+
+<section id="loan">
 
 <h2 class="section-title">🏦 Loan Calculator</h2>
 
@@ -207,176 +395,262 @@ Result here
 <label>Loan Amount</label>
 <input id="loanAmount" type="number">
 
-<label>Interest %</label>
+<label>Interest Rate %</label>
 <input id="loanRate" type="number">
 
 <label>Months</label>
 <input id="loanMonths" type="number">
 
-<button onclick="calcLoan()">Calculate</button>
+<button onclick="calculateLoan()">Calculate Loan</button>
 
 <div class="result" id="loanResult">
-Result here
+Loan result appears here
 </div>
 
 </div>
+
+</section>
+
+
+<div class="ad-banner">
+SECOND SPONSORED AD
+</div>
+
+
+<section id="downloads">
+
 <h2 class="section-title">📥 Popular Apps</h2>
 
-<div class="download-grid">
+<div class="grid">
 
 <div class="download-card">
 <h3>WhatsApp</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://www.whatsapp.com/android/')">Download</a>
+<a class="download-btn" href="https://www.whatsapp.com/android/" target="_blank">Download</a>
 </div>
 
 <div class="download-card">
 <h3>Telegram</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://telegram.org/apps')">Download</a>
+<a class="download-btn" href="https://telegram.org/apps" target="_blank">Download</a>
 </div>
 
 <div class="download-card">
 <h3>TikTok</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://www.tiktok.com/download')">Download</a>
-</div>
-
-<div class="download-card">
-<h3>CapCut</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://www.capcut.com/')">Download</a>
+<a class="download-btn" href="https://www.tiktok.com/download" target="_blank">Download</a>
 </div>
 
 <div class="download-card">
 <h3>Facebook</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://play.google.com/store/apps/details?id=com.facebook.katana')">Download</a>
+<a class="download-btn" href="https://play.google.com/store/apps/details?id=com.facebook.katana" target="_blank">Download</a>
 </div>
 
 <div class="download-card">
 <h3>Instagram</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://www.instagram.com/download/')">Download</a>
+<a class="download-btn" href="https://www.instagram.com/download/" target="_blank">Download</a>
+</div>
+
+<div class="download-card">
+<h3>CapCut</h3>
+<a class="download-btn" href="https://www.capcut.com/" target="_blank">Download</a>
 </div>
 
 </div>
 
 
-<h2 class="section-title">🎬 Movies Hub</h2>
+<h2 class="section-title" style="margin-top:35px;">🎬 Movies Hub</h2>
 
-<div class="download-grid">
+<div class="grid">
 
 <div class="download-card">
 <h3>Trending Movies</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://archive.org')">Watch</a>
+<a class="download-btn" href="https://archive.org" target="_blank">Watch</a>
 </div>
 
 <div class="download-card">
 <h3>Hollywood Movies</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://www.youtube.com/results?search_query=hollywood+full+movie')">Watch</a>
+<a class="download-btn" href="https://www.youtube.com/results?search_query=hollywood+full+movie" target="_blank">Watch</a>
 </div>
 
 <div class="download-card">
 <h3>Nollywood Movies</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://www.youtube.com/results?search_query=nollywood+full+movie')">Watch</a>
+<a class="download-btn" href="https://www.youtube.com/results?search_query=nollywood+full+movie" target="_blank">Watch</a>
 </div>
 
 <div class="download-card">
 <h3>TV Series</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://www.youtube.com/results?search_query=tv+series+full+episodes')">Watch</a>
+<a class="download-btn" href="https://www.youtube.com/results?search_query=tv+series+full+episodes" target="_blank">Watch</a>
 </div>
 
 </div>
+<h2 class="section-title" style="margin-top:35px;">💻 Software Downloads</h2>
 
-
-<h2 class="section-title">💻 Software Downloads</h2>
-
-<div class="download-grid">
-
-<div class="download-card">
-<h3>VLC Player</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://www.videolan.org/vlc/')">Download</a>
-</div>
+<div class="grid">
 
 <div class="download-card">
 <h3>Google Chrome</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://www.google.com/chrome/')">Download</a>
+<a class="download-btn" href="https://www.google.com/chrome/" target="_blank">Download</a>
+</div>
+
+<div class="download-card">
+<h3>VLC Player</h3>
+<a class="download-btn" href="https://www.videolan.org/vlc/" target="_blank">Download</a>
 </div>
 
 <div class="download-card">
 <h3>Adobe Reader</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://get.adobe.com/reader/')">Download</a>
+<a class="download-btn" href="https://get.adobe.com/reader/" target="_blank">Download</a>
 </div>
 
 <div class="download-card">
 <h3>Canva</h3>
-<a class="download-btn" href="#" onclick="forceAd('https://www.canva.com/')">Download</a>
+<a class="download-btn" href="https://www.canva.com/" target="_blank">Download</a>
 </div>
+
+<div class="download-card">
+<h3>Spotify</h3>
+<a class="download-btn" href="https://spotify.com/download" target="_blank">Download</a>
+</div>
+
+<div class="download-card">
+<h3>Zoom</h3>
+<a class="download-btn" href="https://zoom.us/download" target="_blank">Download</a>
+</div>
+
+</div>
+
+</section>
 
 </div>
 
 <footer>
+
+<p>LiberiaHub Finance & Download Center 🇱🇷</p>
+
+<p style="margin-top:8px;">
 Powered by LiberiaMedia.com
+</p>
+
 </footer>
+
+
+<!-- STICKY BOTTOM BANNER -->
+
+<div class="sticky-ad">
+
+BOTTOM SPONSORED AD
+
+</div>
+
+
 <script>
 
-function forceAd(link){
+/* LIVE CURRENCY CONVERTER */
 
-  // tries to trigger Monetag ad first
-  if(typeof show_11225637 === "function"){
-      show_11225637();
-  }
+async function convertCurrency(){
 
-  // then opens actual destination
-  setTimeout(function(){
-      window.open(link,"_blank");
-  },2000);
+let amount =
+parseFloat(document.getElementById("amount").value);
+
+let from =
+document.getElementById("fromCurrency").value;
+
+let to =
+document.getElementById("toCurrency").value;
+
+try{
+
+let response =
+await fetch(
+`https://api.exchangerate-api.com/v4/latest/${from}`
+);
+
+let data = await response.json();
+
+let rate = data.rates[to];
+
+let result = amount * rate;
+
+document.getElementById("currencyResult").innerHTML =
+amount + " " + from +
+" = " +
+result.toFixed(2) +
+" " + to;
+
+}catch(error){
+
+document.getElementById("currencyResult").innerHTML =
+"Unable to fetch live rates.";
+
+}
+
+}
+/* MOBILE MONEY CALCULATOR */
+
+function calcMobileMoney(){
+
+let amount =
+parseFloat(document.getElementById("mmAmount").value) || 0;
+
+let feeRate =
+parseFloat(document.getElementById("provider").value);
+
+let fee = amount * feeRate;
+let total = amount + fee;
+
+document.getElementById("mobileMoneyResult").innerHTML =
+"Fee: L$ " + fee.toFixed(2) +
+"<br>Total Cost: L$ " + total.toFixed(2);
+
 }
 
 
-function convert(){
+/* LOAN CALCULATOR */
 
-  let usd = parseFloat(document.getElementById("usd").value) || 0;
-  let rate = parseFloat(document.getElementById("rate").value) || 193.5;
-  let result = usd * rate;
+function calculateLoan(){
 
-  document.getElementById("result").innerHTML =
-  usd + " USD = L$ " + result.toFixed(2);
+let amount =
+parseFloat(document.getElementById("loanAmount").value) || 0;
 
-}
+let rate =
+parseFloat(document.getElementById("loanRate").value) || 0;
 
+let months =
+parseFloat(document.getElementById("loanMonths").value) || 1;
 
-function calcMM(){
+let monthlyRate =
+(rate / 100) / 12;
 
-  let amt = parseFloat(document.getElementById("mmAmount").value) || 0;
-  let feeRate = parseFloat(document.getElementById("provider").value);
+let payment =
 
-  let fee = amt * feeRate;
-  let total = amt + fee;
+(monthlyRate === 0)
 
-  document.getElementById("mmResult").innerHTML =
-  "Fee: L$ " + fee.toFixed(2) +
-  "<br>Total: L$ " + total.toFixed(2);
+? amount / months
 
-}
+: amount *
+(monthlyRate * Math.pow(1 + monthlyRate, months)) /
 
+(Math.pow(1 + monthlyRate, months) - 1);
 
-function calcLoan(){
+let total =
+payment * months;
 
-  let amount = parseFloat(document.getElementById("loanAmount").value) || 0;
-  let rate = parseFloat(document.getElementById("loanRate").value) || 0;
-  let months = parseFloat(document.getElementById("loanMonths").value) || 1;
+document.getElementById("loanResult").innerHTML =
 
-  let monthlyRate = (rate / 100) / 12;
+"Monthly Payment: L$ " +
+payment.toFixed(2) +
 
-  let payment =
-  (monthlyRate === 0)
-  ? amount / months
-  : amount * (monthlyRate * Math.pow(1 + monthlyRate, months)) /
-  (Math.pow(1 + monthlyRate, months) - 1);
-
-  let total = payment * months;
-
-  document.getElementById("loanResult").innerHTML =
-  "Monthly Payment: L$ " + payment.toFixed(2) +
-  "<br>Total Repayment: L$ " + total.toFixed(2);
+"<br>Total Repayment: L$ " +
+total.toFixed(2);
 
 }
+
+
+/* AUTO LOAD FIRST CURRENCY RESULT */
+
+window.onload = function(){
+
+convertCurrency();
+
+};
 
 </script>
 
