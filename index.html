@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LiberiaHub Finance & Downloads</title>
+<title>LiberiaHub Finance Center</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -21,7 +20,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f4f8fc;
+background:#f5f9ff;
 color:#222;
 line-height:1.5;
 }
@@ -31,14 +30,14 @@ line-height:1.5;
 header{
 background:linear-gradient(135deg,#002868,#BF0A30);
 padding:18px;
-text-align:center;
 position:sticky;
 top:0;
-z-index:999;
-box-shadow:0 3px 12px rgba(0,0,0,.15);
+z-index:1000;
+box-shadow:0 3px 12px rgba(0,0,0,.1);
 }
 
 .logo{
+text-align:center;
 font-size:28px;
 font-weight:700;
 color:white;
@@ -48,32 +47,30 @@ color:white;
 color:#FFD700;
 }
 
-/* NAVIGATION */
-
 nav{
 display:flex;
 justify-content:center;
-gap:12px;
+gap:10px;
 margin-top:10px;
 flex-wrap:wrap;
 }
 
 nav a{
-text-decoration:none;
 color:white;
-font-size:14px;
-padding:7px 14px;
-background:rgba(255,255,255,.15);
+text-decoration:none;
+font-size:13px;
+padding:8px 14px;
+background:rgba(255,255,255,.12);
 border-radius:20px;
 }
 
 /* HERO */
 
 .hero{
-padding:40px 20px;
+padding:45px 20px;
 text-align:center;
 background:
-linear-gradient(rgba(255,255,255,.90),rgba(255,255,255,.92)),
+linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),
 url("https://upload.wikimedia.org/wikipedia/commons/b/b8/Flag_of_Liberia.svg");
 background-size:cover;
 background-position:center;
@@ -81,15 +78,14 @@ background-position:center;
 
 .hero h1{
 font-size:30px;
-font-weight:700;
 color:#002868;
 margin-bottom:10px;
 }
 
 .hero p{
-font-size:15px;
 max-width:650px;
 margin:auto;
+font-size:15px;
 color:#555;
 }
 
@@ -102,19 +98,18 @@ margin:auto;
 padding:20px 0;
 }
 
-/* AD BANNER */
+/* BANNER */
 
-.ad-banner{
-width:100%;
-min-height:90px;
+.banner{
 background:white;
+min-height:90px;
 border-radius:12px;
 margin:20px 0;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
 display:flex;
 justify-content:center;
 align-items:center;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
-padding:10px;
+padding:12px;
 }
 
 /* SECTION */
@@ -123,22 +118,22 @@ padding:10px;
 font-size:24px;
 font-weight:700;
 color:#002868;
-margin:25px 0 15px;
+margin:30px 0 14px;
 }
 
-/* CARDS */
+/* CARD */
 
 .card{
 background:white;
 padding:20px;
-border-radius:16px;
+border-radius:15px;
 box-shadow:0 3px 12px rgba(0,0,0,.08);
 margin-bottom:20px;
 }
 
 label{
 display:block;
-margin-bottom:6px;
+margin-bottom:7px;
 font-size:14px;
 font-weight:500;
 }
@@ -159,25 +154,20 @@ button{
 width:100%;
 padding:14px;
 background:#002868;
-border:none;
 color:white;
 font-size:16px;
-font-weight:600;
+border:none;
 border-radius:10px;
 cursor:pointer;
-transition:.2s;
-}
-
-button:hover{
-transform:scale(1.01);
+font-weight:600;
 }
 
 /* RESULT */
 
 .result{
-margin-top:14px;
-padding:14px;
+margin-top:15px;
 background:#eef4ff;
+padding:14px;
 border-radius:10px;
 font-weight:600;
 }
@@ -196,49 +186,49 @@ gap:15px;
 background:white;
 padding:18px;
 border-radius:14px;
+box-shadow:0 2px 8px rgba(0,0,0,.07);
 text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,.07);
 }
 
 .download-card h3{
-font-size:16px;
 margin-bottom:10px;
+font-size:16px;
 }
 
 .download-btn{
 display:block;
-text-decoration:none;
 padding:10px;
 background:#28a745;
 color:white;
+text-decoration:none;
 border-radius:8px;
 font-weight:600;
 }
 
-/* STICKY BOTTOM AD */
+/* STICKY AD */
 
-.sticky-ad{
+.sticky-banner{
 position:fixed;
 bottom:0;
 left:0;
 width:100%;
 background:white;
-box-shadow:0 -2px 10px rgba(0,0,0,.1);
+box-shadow:0 -2px 10px rgba(0,0,0,.12);
 padding:8px;
-z-index:999;
 text-align:center;
+z-index:999;
 min-height:60px;
 }
 
 /* FOOTER */
 
 footer{
-margin-top:40px;
 background:#002868;
 color:white;
+padding:30px;
 text-align:center;
-padding:25px;
-padding-bottom:80px;
+margin-top:40px;
+padding-bottom:90px;
 }
 
 </style>
@@ -256,7 +246,8 @@ Liberia<span>Hub 🇱🇷</span>
 <nav>
 <a href="#currency">Currency</a>
 <a href="#mobilemoney">Mobile Money</a>
-<a href="#loan">Loans</a>
+<a href="#loan">Loan</a>
+<a href="#data">Data</a>
 <a href="#downloads">Downloads</a>
 </nav>
 
@@ -264,19 +255,31 @@ Liberia<span>Hub 🇱🇷</span>
 
 <section class="hero">
 
-<h1>Liberia Finance & Download Center</h1>
+<h1>Finance Tools & Downloads</h1>
 
 <p>
-Real-time currency conversion, mobile money tools,
-loan calculator and free downloads in one platform.
+Live currency exchange, mobile money tools,
+loan calculator and digital downloads for Liberia.
 </p>
 
 </section>
 
 <div class="container">
 
-<div class="ad-banner">
-TOP SPONSORED AD
+<!-- TOP AD -->
+
+<div class="banner">
+
+<script>
+(function(s){
+s.dataset.zone='11230284';
+s.src='https://nap5k.com/tag.min.js';
+})([document.documentElement, document.body]
+.filter(Boolean)
+.pop()
+.appendChild(document.createElement('script')));
+</script>
+
 </div>
 
 <section id="currency">
@@ -286,22 +289,23 @@ TOP SPONSORED AD
 <div class="card">
 
 <label>Amount</label>
-<input id="amount" type="number" value="1">
+<input type="number" id="amount" value="1">
 
 <label>From Currency</label>
 
 <select id="fromCurrency">
 
-<option value="USD">USD 🇺🇸</option>
-<option value="LRD">LRD 🇱🇷</option>
-<option value="EUR">EUR 🇪🇺</option>
-<option value="GBP">GBP 🇬🇧</option>
-<option value="NGN">NGN 🇳🇬</option>
-<option value="GHS">GHS 🇬🇭</option>
-<option value="ZAR">ZAR 🇿🇦</option>
-<option value="CAD">CAD 🇨🇦</option>
-<option value="AED">AED 🇦🇪</option>
-<option value="INR">INR 🇮🇳</option>
+<option>USD</option>
+<option>LRD</option>
+<option>EUR</option>
+<option>GBP</option>
+<option>NGN</option>
+<option>GHS</option>
+<option>ZAR</option>
+<option>CAD</option>
+<option>AED</option>
+<option>INR</option>
+<option>CNY</option>
 
 </select>
 
@@ -309,53 +313,49 @@ TOP SPONSORED AD
 
 <select id="toCurrency">
 
-<option value="LRD">LRD 🇱🇷</option>
-<option value="USD">USD 🇺🇸</option>
-<option value="EUR">EUR 🇪🇺</option>
-<option value="GBP">GBP 🇬🇧</option>
-<option value="NGN">NGN 🇳🇬</option>
-<option value="GHS">GHS 🇬🇭</option>
-<option value="ZAR">ZAR 🇿🇦</option>
-<option value="CAD">CAD 🇨🇦</option>
-<option value="AED">AED 🇦🇪</option>
-<option value="INR">INR 🇮🇳</option>
+<option>LRD</option>
+<option>USD</option>
+<option>EUR</option>
+<option>GBP</option>
+<option>NGN</option>
+<option>GHS</option>
+<option>ZAR</option>
+<option>CAD</option>
+<option>AED</option>
+<option>INR</option>
+<option>CNY</option>
 
 </select>
 
 <button onclick="convertCurrency()">Convert</button>
 
 <div class="result" id="currencyResult">
-Live conversion result appears here
+Waiting for conversion...
 </div>
 
 </div>
 
 </section>
-
-<div class="ad-banner">
-MID PAGE SPONSORED AD
-</div>
-
 <section id="mobilemoney">
 
-<h2 class="section-title">📱 Liberia Mobile Money Calculator</h2>
+<h2 class="section-title">📱 Mobile Money Calculator</h2>
 
 <div class="card">
 
 <label>Amount (LRD)</label>
-<input id="mmAmount" type="number" placeholder="Enter amount">
+<input type="number" id="mmAmount">
 
 <label>Provider</label>
 
 <select id="provider">
-<option value="0.02">Lonestar MTN</option>
+<option value="0.02">MTN Mobile Money</option>
 <option value="0.018">Orange Money</option>
 </select>
 
-<button onclick="calcMobileMoney()">Calculate Fee</button>
+<button onclick="calcMobileMoney()">Calculate</button>
 
-<div class="result" id="mobileMoneyResult">
-Fee result appears here
+<div class="result" id="mobileResult">
+Waiting for calculation...
 </div>
 
 </div>
@@ -370,18 +370,18 @@ Fee result appears here
 <div class="card">
 
 <label>Loan Amount</label>
-<input id="loanAmount" type="number">
+<input type="number" id="loanAmount">
 
-<label>Interest Rate %</label>
-<input id="loanRate" type="number">
+<label>Interest Rate (%)</label>
+<input type="number" id="loanRate">
 
 <label>Months</label>
-<input id="loanMonths" type="number">
+<input type="number" id="loanMonths">
 
 <button onclick="calculateLoan()">Calculate Loan</button>
 
 <div class="result" id="loanResult">
-Loan result appears here
+Waiting for calculation...
 </div>
 
 </div>
@@ -389,14 +389,49 @@ Loan result appears here
 </section>
 
 
-<div class="ad-banner">
-SECOND SPONSORED AD
+<!-- MIDDLE AD -->
+
+<div class="banner">
+
+<script>
+(function(s){
+s.dataset.zone='11230284';
+s.src='https://nap5k.com/tag.min.js';
+})([document.documentElement, document.body]
+.filter(Boolean)
+.pop()
+.appendChild(document.createElement('script')));
+</script>
+
 </div>
+
+
+<section id="data">
+
+<h2 class="section-title">📶 Data / Airtime Calculator</h2>
+
+<div class="card">
+
+<label>Price Per GB (USD)</label>
+<input type="number" id="pricePerGb" placeholder="Example 2">
+
+<label>Number of GB</label>
+<input type="number" id="gbAmount" placeholder="Example 5">
+
+<button onclick="calculateData()">Calculate Cost</button>
+
+<div class="result" id="dataResult">
+Waiting for calculation...
+</div>
+
+</div>
+
+</section>
 
 
 <section id="downloads">
 
-<h2 class="section-title">📥 Popular Apps</h2>
+<h2 class="section-title">📥 App Downloads</h2>
 
 <div class="grid">
 
@@ -416,13 +451,13 @@ SECOND SPONSORED AD
 </div>
 
 <div class="download-card">
-<h3>Facebook</h3>
-<a class="download-btn" href="https://play.google.com/store/apps/details?id=com.facebook.katana" target="_blank">Download</a>
+<h3>Instagram</h3>
+<a class="download-btn" href="https://www.instagram.com/download/" target="_blank">Download</a>
 </div>
 
 <div class="download-card">
-<h3>Instagram</h3>
-<a class="download-btn" href="https://www.instagram.com/download/" target="_blank">Download</a>
+<h3>Facebook</h3>
+<a class="download-btn" href="https://play.google.com/store/apps/details?id=com.facebook.katana" target="_blank">Download</a>
 </div>
 
 <div class="download-card">
@@ -431,8 +466,6 @@ SECOND SPONSORED AD
 </div>
 
 </div>
-
-
 <h2 class="section-title" style="margin-top:35px;">🎬 Movies Hub</h2>
 
 <div class="grid">
@@ -454,10 +487,12 @@ SECOND SPONSORED AD
 
 <div class="download-card">
 <h3>TV Series</h3>
-<a class="download-btn" href="https://www.youtube.com/results?search_query=tv+series+full+episodes" target="_blank">Watch</a>
+<a class="download-btn" href="https://www.youtube.com/results?search_query=tv+series+episodes" target="_blank">Watch</a>
 </div>
 
 </div>
+
+
 <h2 class="section-title" style="margin-top:35px;">💻 Software Downloads</h2>
 
 <div class="grid">
@@ -483,14 +518,31 @@ SECOND SPONSORED AD
 </div>
 
 <div class="download-card">
+<h3>Zoom</h3>
+<a class="download-btn" href="https://zoom.us/download" target="_blank">Download</a>
+</div>
+
+<div class="download-card">
 <h3>Spotify</h3>
 <a class="download-btn" href="https://spotify.com/download" target="_blank">Download</a>
 </div>
 
-<div class="download-card">
-<h3>Zoom</h3>
-<a class="download-btn" href="https://zoom.us/download" target="_blank">Download</a>
 </div>
+
+
+<!-- BOTTOM PAGE AD -->
+
+<div class="banner">
+
+<script>
+(function(s){
+s.dataset.zone='11230284';
+s.src='https://nap5k.com/tag.min.js';
+})([document.documentElement, document.body]
+.filter(Boolean)
+.pop()
+.appendChild(document.createElement('script')));
+</script>
 
 </div>
 
@@ -500,7 +552,7 @@ SECOND SPONSORED AD
 
 <footer>
 
-<p>LiberiaHub Finance & Download Center 🇱🇷</p>
+<p>LiberiaHub Finance Center 🇱🇷</p>
 
 <p style="margin-top:8px;">
 Powered by LiberiaMedia.com
@@ -509,23 +561,29 @@ Powered by LiberiaMedia.com
 </footer>
 
 
-<!-- STICKY BOTTOM BANNER -->
+<!-- STICKY BOTTOM AD -->
 
-<div class="sticky-ad">
+<div class="sticky-banner">
 
-BOTTOM SPONSORED AD
+<script>
+(function(s){
+s.dataset.zone='11225637';
+s.src='https://nap5k.com/tag.min.js';
+})([document.documentElement, document.body]
+.filter(Boolean)
+.pop()
+.appendChild(document.createElement('script')));
+</script>
 
 </div>
 
-
 <script>
-
 /* LIVE CURRENCY CONVERTER */
 
 async function convertCurrency(){
 
 let amount =
-parseFloat(document.getElementById("amount").value);
+parseFloat(document.getElementById("amount").value) || 1;
 
 let from =
 document.getElementById("fromCurrency").value;
@@ -536,46 +594,65 @@ document.getElementById("toCurrency").value;
 try{
 
 let response =
-await fetch(
-`https://api.exchangerate-api.com/v4/latest/${from}`
-);
+await fetch(`https://open.er-api.com/v6/latest/${from}`);
 
-let data = await response.json();
+let data =
+await response.json();
 
-let rate = data.rates[to];
+let rate =
+data.rates[to];
 
-let result = amount * rate;
+let result =
+amount * rate;
 
 document.getElementById("currencyResult").innerHTML =
+
 amount + " " + from +
-" = " +
-result.toFixed(2) +
-" " + to;
 
-}catch(error){
+" = " +
+
+result.toFixed(2) + " " + to +
+
+"<br><small>Live Exchange Rate: 1 " + from +
+" = " + rate.toFixed(4) + " " + to + "</small>";
+
+}
+
+catch(error){
 
 document.getElementById("currencyResult").innerHTML =
-"Unable to fetch live rates.";
+"Unable to fetch live exchange rate.";
 
 }
 
 }
-/* MOBILE MONEY CALCULATOR */
+
+
+/* MOBILE MONEY */
 
 function calcMobileMoney(){
 
 let amount =
 parseFloat(document.getElementById("mmAmount").value) || 0;
 
-let feeRate =
+let fee =
 parseFloat(document.getElementById("provider").value);
 
-let fee = amount * feeRate;
-let total = amount + fee;
+let charge =
+amount * fee;
 
-document.getElementById("mobileMoneyResult").innerHTML =
-"Fee: L$ " + fee.toFixed(2) +
-"<br>Total Cost: L$ " + total.toFixed(2);
+let total =
+amount + charge;
+
+document.getElementById("mobileResult").innerHTML =
+
+"Service Fee: L$ " +
+
+charge.toFixed(2) +
+
+"<br>Total Cost: L$ " +
+
+total.toFixed(2);
 
 }
 
@@ -613,21 +690,55 @@ payment * months;
 document.getElementById("loanResult").innerHTML =
 
 "Monthly Payment: L$ " +
+
 payment.toFixed(2) +
 
 "<br>Total Repayment: L$ " +
+
+total.toFixed(2);
+
+  }
+  /* DATA / AIRTIME CALCULATOR */
+
+function calculateData(){
+
+let price =
+parseFloat(document.getElementById("pricePerGb").value) || 0;
+
+let gb =
+parseFloat(document.getElementById("gbAmount").value) || 0;
+
+let total =
+price * gb;
+
+document.getElementById("dataResult").innerHTML =
+
+"Total Cost: $" +
+
 total.toFixed(2);
 
 }
 
 
-/* AUTO LOAD FIRST CURRENCY RESULT */
+/* AUTO LOAD FIRST CONVERSION */
 
 window.onload = function(){
 
 convertCurrency();
 
 };
+
+
+/* AUTO CONVERT WHEN CURRENCY CHANGES */
+
+document.getElementById("fromCurrency")
+.addEventListener("change", convertCurrency);
+
+document.getElementById("toCurrency")
+.addEventListener("change", convertCurrency);
+
+document.getElementById("amount")
+.addEventListener("input", convertCurrency);
 
 </script>
 
