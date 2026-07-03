@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<script>
+(function(s){
+s.dataset.zone='11230284';
+s.src='https://nap5k.com/tag.min.js';
+})([document.documentElement, document.body]
+.filter(Boolean)
+.pop()
+.appendChild(document.createElement('script')));
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,8 +34,6 @@ background:#f5f9ff;
 color:#222;
 line-height:1.5;
 }
-
-/* HEADER */
 
 header{
 background:linear-gradient(135deg,#002868,#BF0A30);
@@ -63,8 +72,6 @@ background:rgba(255,255,255,.12);
 border-radius:20px;
 }
 
-/* HERO */
-
 .hero{
 padding:45px 20px;
 text-align:center;
@@ -88,8 +95,6 @@ font-size:15px;
 color:#555;
 }
 
-/* CONTAINER */
-
 .container{
 width:94%;
 max-width:1100px;
@@ -97,30 +102,12 @@ margin:auto;
 padding:20px 0;
 }
 
-/* BANNER */
-
-.banner{
-background:white;
-min-height:90px;
-border-radius:12px;
-margin:20px 0;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
-display:flex;
-justify-content:center;
-align-items:center;
-padding:12px;
-}
-
-/* SECTION */
-
 .section-title{
 font-size:24px;
 font-weight:700;
 color:#002868;
 margin:30px 0 14px;
 }
-
-/* CARD */
 
 .card{
 background:white;
@@ -147,8 +134,6 @@ font-size:16px;
 outline:none;
 }
 
-/* BUTTON */
-
 button{
 width:100%;
 padding:14px;
@@ -161,8 +146,6 @@ cursor:pointer;
 font-weight:600;
 }
 
-/* RESULT */
-
 .result{
 margin-top:15px;
 background:#eef4ff;
@@ -171,15 +154,11 @@ border-radius:10px;
 font-weight:600;
 }
 
-/* GRID */
-
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:15px;
 }
-
-/* DOWNLOAD CARD */
 
 .download-card{
 background:white;
@@ -203,23 +182,6 @@ text-decoration:none;
 border-radius:8px;
 font-weight:600;
 }
-
-/* STICKY AD */
-
-.sticky-banner{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:white;
-box-shadow:0 -2px 10px rgba(0,0,0,.12);
-padding:8px;
-text-align:center;
-z-index:999;
-min-height:60px;
-}
-
-/* FOOTER */
 
 footer{
 background:#002868;
@@ -264,24 +226,6 @@ loan calculator and digital downloads for Liberia.
 </section>
 
 <div class="container">
-
-<!-- TOP AD -->
-
-<div class="banner">
-
-<script>
-  atOptions = {
-    'key' : '01cc0f52b07f4bdf12c535b676b28029',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/01cc0f52b07f4bdf12c535b676b28029/invoke.js"></script>
-
-</div>
-
 <section id="currency">
 
 <h2 class="section-title">🌍 Live Currency Converter</h2>
@@ -294,7 +238,6 @@ loan calculator and digital downloads for Liberia.
 <label>From Currency</label>
 
 <select id="fromCurrency">
-
 <option>USD</option>
 <option>LRD</option>
 <option>EUR</option>
@@ -306,13 +249,11 @@ loan calculator and digital downloads for Liberia.
 <option>AED</option>
 <option>INR</option>
 <option>CNY</option>
-
 </select>
 
 <label>To Currency</label>
 
 <select id="toCurrency">
-
 <option>LRD</option>
 <option>USD</option>
 <option>EUR</option>
@@ -324,7 +265,6 @@ loan calculator and digital downloads for Liberia.
 <option>AED</option>
 <option>INR</option>
 <option>CNY</option>
-
 </select>
 
 <button onclick="convertCurrency()">Convert</button>
@@ -336,6 +276,8 @@ Waiting for conversion...
 </div>
 
 </section>
+
+
 <section id="mobilemoney">
 
 <h2 class="section-title">📱 Mobile Money Calculator</h2>
@@ -389,24 +331,6 @@ Waiting for calculation...
 </section>
 
 
-<!-- MIDDLE AD -->
-
-<div class="banner">
-
-<script>
-  atOptions = {
-    'key' : '43cc1a514abfba0e9b8157bbe5fcb935',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/43cc1a514abfba0e9b8157bbe5fcb935/invoke.js"></script>
-
-</div>
-
-
 <section id="data">
 
 <h2 class="section-title">📶 Data / Airtime Calculator</h2>
@@ -428,8 +352,6 @@ Waiting for calculation...
 </div>
 
 </section>
-
-
 <section id="downloads">
 
 <h2 class="section-title">📥 App Downloads</h2>
@@ -467,6 +389,7 @@ Waiting for calculation...
 </div>
 
 </div>
+
 <h2 class="section-title" style="margin-top:35px;">🎬 Movies Hub</h2>
 
 <div class="grid">
@@ -530,7 +453,6 @@ Waiting for calculation...
 
 </div>
 
-
 </section>
 
 </div>
@@ -545,11 +467,7 @@ Powered by LiberiaMedia.com
 
 </footer>
 
-
-
-
 <script>
-/* LIVE CURRENCY CONVERTER */
 
 async function convertCurrency(){
 
@@ -577,13 +495,9 @@ let result =
 amount * rate;
 
 document.getElementById("currencyResult").innerHTML =
-
 amount + " " + from +
-
 " = " +
-
 result.toFixed(2) + " " + to +
-
 "<br><small>Live Exchange Rate: 1 " + from +
 " = " + rate.toFixed(4) + " " + to + "</small>";
 
@@ -598,9 +512,6 @@ document.getElementById("currencyResult").innerHTML =
 
 }
 
-
-/* MOBILE MONEY */
-
 function calcMobileMoney(){
 
 let amount =
@@ -611,24 +522,15 @@ parseFloat(document.getElementById("provider").value);
 
 let charge =
 amount * fee;
-
-let total =
-amount + charge;
+let total = amount + charge;
 
 document.getElementById("mobileResult").innerHTML =
-
 "Service Fee: L$ " +
-
 charge.toFixed(2) +
-
 "<br>Total Cost: L$ " +
-
 total.toFixed(2);
 
 }
-
-
-/* LOAN CALCULATOR */
 
 function calculateLoan(){
 
@@ -645,31 +547,21 @@ let monthlyRate =
 (rate / 100) / 12;
 
 let payment =
-
 (monthlyRate === 0)
-
 ? amount / months
-
 : amount *
 (monthlyRate * Math.pow(1 + monthlyRate, months)) /
-
 (Math.pow(1 + monthlyRate, months) - 1);
 
-let total =
-payment * months;
+let total = payment * months;
 
 document.getElementById("loanResult").innerHTML =
-
 "Monthly Payment: L$ " +
-
 payment.toFixed(2) +
-
 "<br>Total Repayment: L$ " +
-
 total.toFixed(2);
 
-  }
-  /* DATA / AIRTIME CALCULATOR */
+}
 
 function calculateData(){
 
@@ -679,28 +571,16 @@ parseFloat(document.getElementById("pricePerGb").value) || 0;
 let gb =
 parseFloat(document.getElementById("gbAmount").value) || 0;
 
-let total =
-price * gb;
+let total = price * gb;
 
 document.getElementById("dataResult").innerHTML =
-
-"Total Cost: $" +
-
-total.toFixed(2);
+"Total Cost: $" + total.toFixed(2);
 
 }
 
-
-/* AUTO LOAD FIRST CONVERSION */
-
 window.onload = function(){
-
 convertCurrency();
-
 };
-
-
-/* AUTO CONVERT WHEN CURRENCY CHANGES */
 
 document.getElementById("fromCurrency")
 .addEventListener("change", convertCurrency);
